@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM addEventListener</title>
+</head>
+<body>
+    <input type="text" id="user-input">
+    <button id="btn">난버튼이지롱</button>
+
+    <script>
+        let userinput = document.getElementById("user-input");
+        let btn = document.getElementById("btn");
+
+        // 요소에 이벤트 적용하는법
+        // (이벤트: 사용자가 브라우저에 동작하는 행위 -- 클릭, 스크롤, 마우스오버, 키보드 입력 등)
+        // 이벤트 핸들러(콜백함수): 이벤트가 발생했을 때 처리할 함수
+        btn.addEventListener("click", function(){
+            // alert("클릭 이벤트 발생")
+            // 유저가 입력한 값을 console 창에 입력하는
+            // input.select.textArea의 값에 접근할 때: value
+            console.log(userinput.value);
+        })
+
+    </script>
+</body>
+</html>
