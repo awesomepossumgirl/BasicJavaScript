@@ -26,7 +26,7 @@
         //  - 함수 선언문이 자바스크립트 엔진에 의해서 먼저 실행되는 방식
         //  - 원치 않는 실행 결과가 나올 수 있기 때문에 최근 트렌드는 함수표현식(+화살표 함수)를 채택하고 있다.
         function greet() {
-            console.log("나는 함수를 선언하는 최다인이다");
+            console.log("함수선언문go");
         }
         greet();
 
@@ -39,10 +39,10 @@
 
         // (3) 화살표함수
         let greet3 = (name) => {
-            console.log("화살표 함수를 쓰는 다인이다!");
+            console.log("화살표 함수 이게 찐!");
             return(console.log(name));
         }
-        grret3("다인");
+        greet3("다인");
 
         // return이 있을 때, 실행문이 한 문장일 경우에는 return과 {} 생략 가능
         let greet4 = (name) => ("안녕하세요?" + name);

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM keyboardEvent</title>
+    <style>
+        /* 스타일링된 박스 */
+        #box {
+            width: 50px;
+            height: 50px;
+            background-color: rgb(255, 14, 14);
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 움직이는 박스 -->
+    <div id="box"></div>
+    <script>
+        // 키 입력 이벤트 리스너 추가
+        document.addEventListener("keydown", function(event) {
+            let box = document.getElementById("box"); // 박스 요소 가져오기
+            let step = 10; // 이동 거리 지정
+            let top = parseInt(window.getComputedStyle(box).top); // 현재 top 값 가져오기
+            let left = parseInt(window.getComputedStyle(box).left); // 현재 left 값 가져오기
+            
+            // 키 입력에 따라 박스 이동
+            switch (event.key) {
+                case "w": // 위로 이동
+                    box.style.top = top - step + "px";
+                    break;
+                case "s": // 아래로 이동
+                    box.style.top = top + step + "px";
+                    break;
+                case "a": // 왼쪽으로 이동
+                    box.style.left = left - step + "px";
+                    break;
+                case "d": // 오른쪽으로 이동
+                    box.style.left = left + step + "px";
+                    break;
+            }
+        });
+    </script>
+</body>
+</html>
