@@ -13,9 +13,21 @@
     <script>
         let num = document.getElementById("num");
         let plus = document.querySelector("#btn-plus");
+        let minus = document.querySelector("#btn-minus")
         plus.addEventListener("click", function(){
-            let i
-        })
+            let i = Number(num.textContent)
+            i += 1;
+            num.textContent = i;
+        });
+        minus.addEventListener("click", function(){
+            let i = Number(num.textContent)
+            i -= 1;
+
+            if (i <= 0) {
+                i = 0;
+            };
+            num.textContent = i;
+        });
     </script>
 </body>
 </html>
